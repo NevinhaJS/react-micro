@@ -39,6 +39,5 @@
   "devDependencies": {
     "tslint-react": "^5.0.0",
     "tslint-react-hooks": "^2.2.2"
-  },
-  "gitHead": "ee56371d0dbfafeff78f1cce258a1b0b1199653c"
+  }
 }
