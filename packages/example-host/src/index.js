@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { connector } from "react-micro";
+import { connector } from "react-micro-js";
 
 const mountFn = (connect) => (containerId, deeps) => {
   console.log("### INDEX POINT RE-RENDER", containerId);

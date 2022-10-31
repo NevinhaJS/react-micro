@@ -25,7 +25,7 @@ If you don't want to spend too much time chaing the architecture of your contain
 It's pretty straight forward, you just need to call the `Micro` component in your container, which is in most of the case the root application:
 
 ```js
-import { Micro } from "react-micro";
+import { Micro } from "react-micro-js";
 
 <Micro
     name="MicroCar"
@@ -65,10 +65,10 @@ Please notice we're calling a `connect` function which will come as parameter fr
 - _**containerId**_ is the id of your micro-frontend container, which will be `[YOUR_MICRO_FRONTEND_NAME]-container`
 - _**deeps**_ dependency array provided from the parent container.
 
-Then, you just need to provide your `mountFn` to react-micro `connector` and that is it:
+Then, you just need to provide your `mountFn` to react-micro-js `connector` and that is it:
 
 ```js
-import { connector } from "react-micro";
+import { connector } from "react-micro-js";
 
 const host = connector(mountFn, {
   devRoot: "root",
@@ -82,7 +82,7 @@ Where:
 - _**devRoot**_ is the id of the html element that the micro-frontend should be attached in case it is running isolated, without the container. Eg: suppose your application is running at `localhost:3000` but your micro-frontend is running at `localhost:4000` and you are accessing `localhost:4000` directly, the connector function will know that there isn't any container to attach your micro-frontend, so it will try to find the html tag with the `id === devRoot` property.
 
 ### Found an issue, need help or want a feature request?
-We're more than happy to fix bugs, create features or help you anything, you just need to create an issue [here](https://github.com/NevinhaJS/react-micro/issues/new).
+We're more than happy to fix bugs, create features or help you anything, you just need to create an issue [here](https://github.com/NevinhaJS/react-micro-js/issues/new).
 
 ### What is next?
 

@@ -15,7 +15,7 @@ const useManifest = (
   { name, manifestSRC, host }: IUseManifestOptions,
   fetchOpts: any,
 ): TUseManifestReturn => {
-  const scriptId = `_react-micro-${name}`;
+  const scriptId = `_react-micro-js-${name}`;
   const [manifest, setManifest] = useState();
   const [error, setError] = useState();
 

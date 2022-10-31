@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { Micro } from "react-micro";
+import { Micro } from "react-micro-js";
 import React, { useState } from "react";
 
 function App() {

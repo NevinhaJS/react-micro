@@ -8,7 +8,7 @@
     "lerna": "^6.0.1"
   },
   "scripts": {
-    "build-core": "lerna run build --scope=react-micro",
+    "build-core": "lerna run build --scope=react-micro-js",
     "build": "lerna run build",
     "dev-example-container": "lerna run start --scope=example-container",
     "dev-example-host": "lerna run start --scope=example-host"
