@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NevinhaJS/react-micro-js/tree/master/packages/core"
+    "url": "https://github.com/NevinhaJS/react-micro/tree/master/packages/core"
   },
   "publishConfig": {
     "access": "public"
@@ -40,5 +40,5 @@
     "tslint-react": "^5.0.0",
     "tslint-react-hooks": "^2.2.2"
   },
-  "gitHead": "27b43cd19c18f781fd9c6b5c36be5b6ff53128c4"
+  "gitHead": "001b2c87e8e3590db64e9c1b021dbce80029a473"
 }
