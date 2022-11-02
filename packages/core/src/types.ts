@@ -1,7 +1,6 @@
-import { Root } from 'react-dom/client';
-
 export type TManifest = { [key: string]: any } & { files: Record<string, string> };
-export type TConnectRootFn = (reactRoot: Root) => void;
+// TODO: Type the reactRoot
+export type TConnectRootFn = (reactRoot: any) => void;
 export type TRenderFn = (cointainerId: string, deeps: any[]) => void;
 export type TMountFn = (connect: TConnectRootFn) => TRenderFn;
 export type TCreateRootOpts = {

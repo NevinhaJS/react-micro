@@ -6,8 +6,8 @@ interface MicroProps {
   name: string;
   host: string;
   manifestSRC: string;
-  deeps: any[];
-  fetchOpts: any;
+  deeps?: any;
+  fetchOpts?: any;
 }
 
 const Micro = ({ name, host, deeps, manifestSRC, fetchOpts }: MicroProps) => {

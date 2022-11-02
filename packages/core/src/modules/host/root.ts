@@ -1,5 +1,3 @@
-import { Root } from 'react-dom/client';
-
 import { RENDER_FUNCTION_ID, UNMOUNT_FUNCTION_ID } from './constants';
 import { TCreateRootOpts, TMountFn, TRoot } from './../../types';
 import { getContainerByName } from '../container/utils';
@@ -26,7 +24,7 @@ export const createRoot = (root: any, mountFn: TMountFn, { onUnmount, name }: TC
     internalRoot = null;
   };
 
-  const setInternalRoot = (reactRoot: Root) => (internalRoot = reactRoot);
+  const setInternalRoot = (reactRoot: any) => (internalRoot = reactRoot);
 
   const render = mountFn(setInternalRoot);
 
