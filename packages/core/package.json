@@ -14,9 +14,6 @@
   },
   "version": "1.0.4",
   "license": "MIT",
-  "files": [
-    "dist/*"
-  ],
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
