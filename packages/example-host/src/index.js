@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { connector } from "react-micro-js";
 
-const mountFn = (connect) => (containerId, deeps) => {
+const mountFn = (connect) => (containerId, dependencies) => {
   console.log("### INDEX POINT RE-RENDER", containerId);
 
   const root = ReactDOM.createRoot(document.getElementById(containerId));
