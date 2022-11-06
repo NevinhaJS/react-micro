@@ -31,7 +31,7 @@ import { Micro } from "react-micro-js";
     name="MicroCar"
     manifestSRC="manifest.json"
     host="http://localhost:4000"
-    deeps={[...]}
+    dependencies={[...]}
 />
 ```
 
@@ -39,7 +39,7 @@ where:
 - _**name**_ is the name of your micro frontend. Keep this name in mind, because this should be the same that you will use in the `connect` function later.
 - _**manifestSRC**_ the destination to your manifest file. In this case the manifest file is found at `http://localhost:4000/manifest.json`
 - _**host**_ the endpoint where your micro-frontend is deployed.
-- _**deeps**_ the dependency array which you want to inject in your micro-frontend when it is going to be mounted. Usually used for _browser history_, _event emitters_ and _shared capabilities_.
+- _**dependencies**_ the dependency array which you want to inject in your micro-frontend when it is going to be mounted. Usually used for _browser history_, _event emitters_ and _shared capabilities_.
 
 The **manifest** is json file which has a `files` entry on it. If you use create-react-app it will be something like:
 
@@ -51,7 +51,7 @@ There's one last step, which is to configure your micro-frontend, some times cal
 In the entry point of your application, most of the time `index.js`, you need to move your ReactDOM render logic to be inside a function, like this example bellow:
 
 ```js
-const mountFn = (connect) => (containerId, deeps) => {
+const mountFn = (connect) => (containerId, dependencies) => {
   const root = ReactDOM.createRoot(document.getElementById(containerId));
 
   root.render(<App />);
@@ -60,10 +60,10 @@ const mountFn = (connect) => (containerId, deeps) => {
 };
 ```
 
-Please notice we're calling a `connect` function which will come as parameter from the `connector` later. Also notice this 2 parameters provided in the curried function: `containerId` and `deeps`, where:
+Please notice we're calling a `connect` function which will come as parameter from the `connector` later. Also notice this 2 parameters provided in the curried function: `containerId` and `dependencies`, where:
 
 - _**containerId**_ is the id of your micro-frontend container, which will be `[YOUR_MICRO_FRONTEND_NAME]-container`
-- _**deeps**_ dependency array provided from the parent container.
+- _**dependencies**_ dependency array provided from the parent container.
 
 Then, you just need to provide your `mountFn` to react-micro-js `connector` and that is it:
 

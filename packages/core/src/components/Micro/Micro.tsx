@@ -6,18 +6,18 @@ interface MicroProps {
   name: string;
   host: string;
   manifestSRC: string;
-  deeps?: any;
+  dependencies?: any;
   fetchOpts?: any;
 }
 
-const Micro = ({ name, host, deeps, manifestSRC, fetchOpts }: MicroProps) => {
+const Micro = ({ name, host, dependencies, manifestSRC, fetchOpts }: MicroProps) => {
   const containerId = `${name}-container`;
   const renderHost = useCallback(() => {
     const renderFnName = RENDER_FUNCTION_ID + name;
 
     if (!(window as any)[renderFnName]) return;
 
-    (window as any)[renderFnName](containerId, deeps);
+    (window as any)[renderFnName](containerId, dependencies);
   }, []);
 
   const dettachHost = () => {
