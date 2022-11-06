@@ -21,7 +21,7 @@ const useManifest = (
 
   useEffect(() => {
     const attachScript = (manifestData: TManifest) => {
-      const promises = Object.keys(manifestData['files']).reduce(
+      const promises = Object.keys(manifestData.files).reduce(
         (acc: any, key) => (key.endsWith('.js') ? [...acc, appendChunck(key, host, manifestData, scriptId)] : acc),
         [],
       );

@@ -5,12 +5,19 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "^6.0.1"
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "eslint-config-react-app": "^7.0.1",
+    "lerna": "^6.0.1",
+    "typescript": "^4.8.4"
   },
   "scripts": {
     "build-core": "lerna run build --scope=react-micro-js",
     "build": "lerna run build",
     "dev-example-container": "lerna run start --scope=example-container",
-    "dev-example-host": "lerna run start --scope=example-host"
+    "dev-example-host": "lerna run start --scope=example-host",
+    "ci": "yarn install --immutable --immutable-cache --check-cache",
+    "lint": "yarn eslint"
   }
 }
